@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+// import { useState, useEffect } from "react";
 import useFetch from "../shared/useFetch";
 import BlogList from "./BlogList";
 
@@ -64,15 +64,13 @@ const Home = () => {
   // [] empty dependency array means it will run only once when the component is rendered (just like onInit in angular)
   return (
     <div className="home">
-      {/*<h2>Home</h2>*/}
-      {/*<p>{name}</p>*/}
-      {/*<button onClick={handleClick}>Click Me</button>*/}
-      {/*<button onClick={(e) => handleClickAgain("Shalitha", e)}>*/}
-      {/*    Click Me Again*/}
-      {/*</button>*/}
-      {/*this is how to pass value to button click*/}
-      {error && <h1>{error}</h1>}
-      {isLoading && <h1>Loading...</h1>}
+      {" "}
+      {/*<h2>Home</h2>*/} {/*<p>{name}</p>*/}{" "}
+      {/*<button onClick={handleClick}>Click Me</button>*/}{" "}
+      {/*<button onClick={(e) => handleClickAgain("Shalitha", e)}>*/}{" "}
+      {/*    Click Me Again*/} {/*</button>*/}{" "}
+      {/*this is how to pass value to button click*/}{" "}
+      {error && <h1> {error} </h1>} {isLoading && <h1> Loading... </h1>}{" "}
       {blogs && (
         <BlogList
           blogs={blogs}
@@ -80,14 +78,14 @@ const Home = () => {
           //   handleDelete={handleDelete}
         />
       )}{" "}
-      {/* conditionally render the component*/}
+      {/* conditionally render the component*/}{" "}
       {/* <BlogList
-        blogs={blogs.filter((blog) => blog.author === "Shalitha")}
-        title={"Shalitha's Blogs"}
-      /> */}
-      {/*pass blogs to BlogList component using props*/}
+                    blogs={blogs.filter((blog) => blog.author === "Shalitha")}
+                    title={"Shalitha's Blogs"}
+                  /> */}{" "}
+      {/*pass blogs to BlogList component using props*/}{" "}
       {/* <button onClick={() => setName("Deshan")}>Change Name</button>
-      <p>{name}</p> */}
+                  <p>{name}</p> */}{" "}
     </div>
   );
 };
